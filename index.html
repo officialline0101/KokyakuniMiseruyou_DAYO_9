@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,28 @@
     <style>
         /* 右端の細いナビ（固定） */
         .side-nav {
-            position: fixed; /* 画面スクロールしても固定 */
-            right: -5px; /* さらに右へ */
-            top: 80%; /* 画面中央に固定 */
-            transform: translateY(-50%) translateX(13px); /* 中央配置と右ずらし */
-            background: #45c4b7;
+            position: fixed;
+            /* 画面スクロールしても固定 */
+            right: -5px;
+            /* さらに右へ */
+            top: 80%;
+            /* 画面中央に固定 */
+            transform: translateY(-50%) translateX(16px);
+            /* 中央配置と右ずらし */
+            background: #FF8C00;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 4px;
             border-radius: 10px 0 0 10px;
             z-index: 1000;
-            width: 35px; /* さらに細く */
+            width: 35px;
+            /* さらに細く */
         }
 
         .side-nav a:active {
-            transform: scale(1.0); /* タップした後に元のサイズに戻す */
+            transform: scale(1.0);
+            /* タップした後に元のサイズに戻す */
         }
 
         .side-nav a {
@@ -45,17 +51,22 @@
         }
 
         .side-nav a span {
-            font-size: 24px; /* 矢印をさらに大きく */
+            font-size: 24px;
+            /* 矢印をさらに大きく */
             position: absolute;
-            left: -0px; /* 左端に寄せる */
-            top: 13px; /* さらに下へ */
+            left: 2px;
+            /* 左端に寄せる */
+            top: 13px;
+            /* さらに下へ */
         }
 
         /* スマホ用の微調整 */
         @media (max-width: 600px) {
             .side-nav {
-                right: 2px; /* スマホではさらに右端に */
-                width: 30px; /* もっと細く */
+                right: 2px;
+                /* スマホではさらに右端に */
+                width: 30px;
+                /* もっと細く */
             }
 
             .side-nav a {
@@ -64,13 +75,14 @@
             }
 
             .side-nav a i {
-                font-size: 12px; /* スマホではもっと小さく */
+                font-size: 12px;
+                /* スマホではもっと小さく */
             }
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #e7e7e7;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -84,7 +96,7 @@
             background-color: #fdfdfd;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 90%;
+            width: 96%;
             max-width: 500px;
             padding: 25px;
             box-sizing: border-box;
@@ -92,15 +104,15 @@
         }
 
         h1 {
-            background: linear-gradient(135deg, #45c4b7, #35a79b);
+            background: linear-gradient(135deg, #FF8C00, #d86c00);
             color: white;
             padding: 20px;
-            border-radius: 0 15px 0px 45px;
+            border-radius: 0 0px 0px 0px;
             text-align: center;
             display: block;
             margin: -20px -15px 20px -15px;
             font-size: 26px;
-            font-weight: 600;
+            font-weight: 100;
             box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.05);
             position: relative;
             overflow: hidden;
@@ -108,36 +120,58 @@
 
         .label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             padding: 3px;
-            font-weight: 600;
-            background-color: #45c4b7;
-            color: white;
-            border-radius: 6px;
+            font-weight: 400;
+            background-color: #FF8C00;
+            color: #ffffff;
+            border-radius: 0px;
             font-size: 18px;
             text-align: center;
-            /* 中央揃え */
             text-indent: 20px;
-            /* テキストを右に20pxずらす */
             position: relative;
             overflow: hidden;
+            border-top: 1px solid black;
+            /* 上の線 */
+            border-bottom: 1px solid black;
+            /* 下の線 */
+        }
+
+        .labeltyuuou {
+            display: block;
+            margin-bottom: 20px;
+            padding: 3px;
+            background-color: #FF8C00;
+            color: #ffffff;
+            border-radius: 0px;
+            font-size: 18px;
+            text-align: center;
+            text-indent: 0px;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid black;
+            /* 上の線 */
+            border-bottom: 1px solid black;
+            /* 下の線 */
         }
 
         .labelContent {
             display: block;
             margin-bottom: 10px;
             padding: 3px;
-            font-weight: 600;
-            background-color: #45c4b7;
-            color: white;
-            border-radius: 6px;
+            font-weight: 400;
+            background-color: #ffffff;
+            color: rgb(20, 20, 20);
+            border-radius: 0px;
             font-size: 18px;
             text-align: center;
-            /* 中央揃え */
             text-indent: 0px;
-            /* テキストを右に20pxずらす */
             position: relative;
             overflow: hidden;
+            border-top: 1px solid black;
+            /* 上の線 */
+            border-bottom: 1px solid black;
+            /* 下の線 */
         }
 
         /* 必須マークのスタイル */
@@ -152,12 +186,12 @@
             align-items: center;
             justify-content: center;
             background: white;
-            color: #45c4b7;
+            color: #FF8C00;
             font-weight: bold;
             font-size: 0.9em;
             border-radius: 4px;
             padding: 2px 6px;
-            border: 2px solid #45c4b7;
+            border: 2px solid #FF8C00;
         }
 
         input[type="text"],
@@ -165,12 +199,17 @@
         textarea {
             width: 100%;
             padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #555555;
+            border-radius: 3px;
             box-sizing: border-box;
             font-size: 16px;
             transition: all 0.3s;
+
+            /* 以下を追加 */
+            position: relative;
+            top: -5px;
+            /* ← 上に5pxずらす（数値調整OK） */
         }
 
         .visit-buttons,
@@ -189,7 +228,7 @@
         .irradiations button {
             flex: 1;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #2e2e2e;
             border-radius: 4px;
             background-color: #f7f7f7;
             cursor: pointer;
@@ -202,8 +241,8 @@
         .symptoms button.active,
         .menu-sections button.active,
         .irradiations button.active {
-            background-color: #444;
-            color: #fff;
+            background-color: #ffffff;
+            color: #141414;
         }
 
         .date-inputs input[type="datetime-local"] {
@@ -220,7 +259,7 @@
             padding: 15px;
             border: none;
             border-radius: 4px;
-            background-color: #ff4c4c;
+            background-color: #FF8C00;
             color: #fff;
             font-size: 18px;
             cursor: pointer;
@@ -264,7 +303,7 @@
             width: auto;
             /* 通常のセルは自動調整 */
             box-sizing: border-box;
-            border: 2px solid #696969;
+            border: 1px solid #1a1a1a;
         }
 
         .calendar th:first-child,
@@ -284,7 +323,7 @@
         }
 
         .calendar td.selected {
-            background-color: #45c4b7;
+            background-color: #FF8C00;
             color: #fff;
         }
 
@@ -298,11 +337,25 @@
 
         .week-button {
             padding: 10px 20px;
-            background-color: #444444;
-            color: #fff;
-            border: none;
+            background-color: #ffffff;
+            color: #222222;
+            border: 1px solid black;
+            /* ← 外枠を黒1pxに設定 */
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            transform-origin: center center;
+        }
+
+        .week-button:hover {
+            background-color: #ffffff;
+            transform: scale(1.15);
+            /* ドーン！ってくらい拡大🔥 */
+        }
+
+        .week-button:active {
+            transform: scale(0.95);
+            /* クリックした瞬間にギュッと縮む💥 */
         }
 
         .month-button-container {
@@ -315,17 +368,31 @@
 
         .month-button {
             padding: 10px 20px;
-            background-color: #444;
-            color: #fff;
-            border: none;
+            background-color: #ffffff;
+            color: #222222;
+            border: 1px solid black;
+            /* ← 外枠を黒1pxに設定 */
             border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            transform-origin: center center;
+        }
+
+        .month-button:hover {
+            background-color: #ffffff;
+            transform: scale(1.15);
+            /* ドーン！ってくらい拡大🔥 */
+        }
+
+        .month-button:active {
+            transform: scale(0.95);
+            /* クリックした瞬間にギュッと縮む💥 */
         }
 
         .current-month {
             font-size: 16px;
-            font-weight: bold;
-            color: #444;
+            font-weight: 300;
+            color: #3e3f41;
             margin-top: 20px;
             /* 下にずらす */
             display: inline-block;
@@ -359,7 +426,7 @@
             height: 60px;
             border: 5px solid rgba(255, 255, 255, 0.2);
             /* 薄い白で枠を柔らかく */
-            border-top-color: #45c4b7;
+            border-top-color: #00d1ff;
             /* 明るい青で目立たせる */
             border-radius: 50%;
             /* 丸い形状 */
@@ -413,10 +480,19 @@
         }
 
         #treatment-text {
-            background-color: #eef9f5;
-            padding: 10px;
-            border-radius: 4px;
-            margin-top: 1px;
+            background-color: #f9f9f9;
+            padding: 16px 20px;
+            border: 1px solid #000000;
+            border-top: none;
+            /* ← 上の横線を非表示 */
+            border-radius: 0 0 3px 3px;
+            /* ← 上の角の丸みをなくして自然に */
+            margin-top: -13px;
+            /* ← 少し上に詰める（12px → 4px） */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            font-size: 15px;
+            line-height: 1.6;
+            color: #000000;
         }
 
         .highlight-background {
@@ -430,13 +506,6 @@
             /* コンテナ内の要素を中央に配置 */
         }
 
-        .highlight-text {
-            display: block;
-            font-weight: bold;
-            text-align: center;
-            /* テキストを中央揃えにする */
-        }
-
         .red-circle {
             color: red;
             /* 赤色に設定 */
@@ -448,30 +517,32 @@
         }
 
         .info-text {
-            margin-top: 20px;
-            /* 上の余白 */
-            margin-bottom: 10px;
-            /* 下に白い隙間を追加 */
+            position: relative;
+            /* ← 上下移動を有効にする */
+            top: -20px;
+            /* ← 上に8pxずらす（数値調整可） */
+            margin-top: 0;
+            /* ← 上のマージンは0にしておくと自然 */
+            margin-bottom: 0px;
             font-size: 13px;
             color: #000000;
             line-height: 1.5;
             text-align: center;
             word-wrap: break-word;
-            background-color: #eef9f5;
-            /* 青っぽい背景色を追加 */
-            padding: 10px;
-            border-radius: 4px;
+            background-color: #f3f3f3;
+            padding: 0px;
+            border-radius: 0 0 4px 4px;
+            border: 1px solid black;
+            border-top: none;
         }
 
-        /* 携帯端末向けのレスポンシブデザイン */
+        /* スマホ対応 */
         @media (max-width: 768px) {
             .info-text {
                 font-size: 11.5px;
-                /* スマホでは少し小さく */
-                margin-top: 10px;
-                /* 上下のマージンを調整 */
+                top: -20px;
+                /* ← モバイルでは少し控えめに上にずらす */
                 line-height: 2.0;
-                /* テキストの高さ調整 */
             }
         }
 
@@ -487,9 +558,9 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #000000;
             border-radius: 4px;
-            background-color: #f7f7f7;
+            background-color: #ffffff;
             cursor: pointer;
             box-sizing: border-box;
             text-align: center;
@@ -498,13 +569,13 @@
 
         .symptoms button.active,
         .options button.active {
-            background-color: #444;
-            color: #fff;
+            background-color: #ffffff;
+            color: #000000;
         }
 
         .highlight-background {
             cursor: pointer;
-            background-color: #45c4b7;
+            background-color: #FF8C00;
             padding: 10px;
             border-radius: 6px;
             font-size: 18px;
@@ -524,18 +595,11 @@
             /* ボタンを縦並びに */
         }
 
-        .highlight-text {
-            font-weight: bold;
-            display: inline-block;
-            color: #fff;
-            /* オプションテキストの色 */
-        }
-
         .info-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: -5px 0;
+            margin: -6px 0;
         }
 
         hr {
@@ -543,28 +607,31 @@
         }
 
         .edit-button {
-    background-color: #ff6b6b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    white-space: nowrap; /* 改行を防ぐ */
-    width: 80px; /* 横幅を固定 */
-    text-align: center; /* テキストを中央揃え */
-}
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid black;
+            /* ← 外枠を黒1pxに設定 */
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+            /* 改行を防ぐ */
+            width: auto;
+            text-align: center;
+        }
 
-.edit-button:hover {
-    background-color: #ff4f4f;
-}
-
+        .edit-button:hover {
+            background-color: #FF8C00;
+            color: #ffffff;
+            /* ← 黒背景に合わせて文字色を白にすると視認性が上がります（任意） */
+        }
 
         /* 100点の予約フォームCSS */
 
         input:focus,
         textarea:focus {
-            border-color: #45c4b7;
+            border-color: #FF8C00;
             outline: none;
             box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
         }
@@ -573,7 +640,7 @@
             padding: 12px;
             border: none;
             border-radius: 6px;
-            background-color: #45c4b7;
+            background-color: #3e3f41;
             color: #000000;
             font-size: 16px;
             cursor: pointer;
@@ -589,11 +656,13 @@
             width: 100%;
             padding: 15px;
             font-size: 18px;
-            background-color: #06c755;
+            background-color: #FF8C00;
+            margin-top: 12px;
+            /* ← ここで下方向にずらす */
         }
 
         .submit-button:hover {
-            background-color: #06c755;
+            background-color: #FF8C00;
         }
 
         @media (max-width: 768px) {
@@ -612,9 +681,11 @@
         }
 
         button.active {
-            outline: 2px solid #696969;
+            outline: 1px solid #2b2b2b;
             /* ここで枠線を指定 */
             outline-offset: 2px;
+            /* 外側に色を追加 */
+            box-shadow: 0 0 0 3px #FF8C00
         }
 
         /* 必須マークのスタイル */
@@ -642,7 +713,7 @@
             left: 50%;
             transform: translate(-50%, -10px);
             /* Y方向に上げる */
-            background-color: #45c4b7;
+            background-color: #3e3f41;
             color: #fff;
             padding: 3px 12px;
             /* ボックスのパディングを縮小 */
@@ -650,45 +721,156 @@
             /* 角の丸みを少し減少 */
             font-size: 1.4rem;
             /* フォントサイズを小さく */
-            font-weight: bold;
+            font-weight: 300;
             box-shadow: 0 2px 6px rgba(47, 103, 167, 0.2);
             /* 影も控えめに */
         }
 
-    /* ナビゲーションバー */
-    .sidebar {
-        position: fixed;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #1e1e2d;
-        padding: 10px;
-        border-radius: 10px 0 0 10px;
-        z-index: 1000;
-    }
+        /* ナビゲーションバー */
+        .sidebar {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1e1e2d;
+            padding: 10px;
+            border-radius: 10px 0 0 10px;
+            z-index: 1000;
+        }
 
-    .sidebar a {
-        display: block;
-        padding: 15px;
-        color: white;
-        text-decoration: none;
-        text-align: center;
-        font-size: 14px;
-        margin-bottom: 10px;
-        background: #45c4b7;
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 10px;
+            background: #4a90e2;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-    .sidebar a:hover {
-        background: #45c4b7;
-    }
+        .sidebar a:hover {
+            background: #357ac4;
+        }
 
-    /* スクロール用のセクション */
-    .section {
-        padding: 50px 10px;
-        margin-top: 30px;
-    }
+        /* スクロール用のセクション */
+        .section {
+            padding: 50px 10px;
+            margin-top: 30px;
+        }
+
+        .repeat-booking-wrapper {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #repeatBookingButton {
+            background-color: #f7f7f7;
+            color: #000000;
+            border: 1px solid #000000;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #repeatBookingButton:hover {
+            background-color: #f1f1f1;
+            color: #000000;
+        }
+
+:root {
+  --ink:#111;
+  --ink-muted:#666;
+  --line:#111;
+  --hairline:#f2f2f2;
+  --card:#fff;
+  --radius:16px;
+}
+
+/* 画像エリア（黒線を削除） */
+.treatment-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  /* border: 1.5px solid var(--line); ←削除 */
+  box-shadow: 0 1px 0 rgba(0,0,0,.06);
+}
+.treatment-image img {
+  width: 100%;
+  display: none;
+  border-radius: 0;
+}
+
+/* 詳細・料金セクション */
+.treatment-description, 
+.treatment-price {
+  position: relative;
+  margin-top: 20px;
+  padding: 18px 0;   /* ← 左右の余白を削って横幅を広く */
+  background: #fff;
+  border-top: 2.5px solid var(--line);
+  border-bottom: 0;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: 1.6;
+  color: #222;
+
+  width: 100%;       /* ← 親要素いっぱいに広げる */
+  max-width: none;   /* ← 幅制限がかかっていた場合に解除 */
+  box-sizing: border-box; /* ← パディング含めて横幅計算 */
+}
+
+/* 見出しラベル */
+.treatment-description::before,
+.treatment-price::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 14px;
+  padding: 2px 12px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+}
+.treatment-description::before { content: "詳細"; }
+.treatment-price::before { content: "料金"; }
+
+
+
+/* 強調 */
+.treatment-price strong {
+  font-size: 18px;  /* 料金だけ大きめ */
+  font-weight: 900;
+}
+.treatment-price span {
+  color: var(--ink-muted);
+}
+
+/* 重複文言を非表示 */
+.treatment-price > span:first-child {
+  display: none;
+}
+
+/* 画面が広い時 */
+@media (min-width: 720px){
+  .treatment-title { font-size: 18px; }
+  .treatment-price strong { font-size: 18px; }
+}
     </style>
 </head>
 
@@ -702,96 +884,49 @@
     </div>
 
     <div class="container">
-        <h1>apaiser-アペゼ-<br>予約フォーム
+        <h1>La sante<br>予約フォーム
         </h1>
+
         <div class="label">お客様名<span class="required">必須</span></div>
+
         <input type="text" id="name" placeholder="お名前を入力してください" oninput="saveInput('name')">
 
-        <div class="label">電話番号<span class="required">必須</span></div>
+        <div class="labeltyuuou">電話番号</div>
         <input type="tel" id="phone" placeholder="電話番号を入力してください" oninput="saveInput('phone')">
 
-        <div class="label">ご来店回数<span class="required">必須</span></div>
-        <div class="visit-buttons">
-            <button type="button" id="firstVisit" onclick="selectVisit(this)">1回目</button>
-            <button type="button" id="repeatVisit" onclick="selectVisit(this)">2回目以降</button>
-        </div>
-
-        <div class="label" id="course">メニューをお選びください<span class="required">必須</span></div>
-        <div class="info-text">※メニューを選択すると<br>空き状況のカレンダーが表示されます</div>
+        <div class="label" id="course">ご来店回数<span class="required">必須</span></div>
         <div class="menu-sections">
-            <button type="button" onclick="showMenu('male')">アートメイク</button>
-            <button type="button" onclick="showMenu('female')">ララピール</button>
-            <button type="button" onclick="showMenu('keana')">毛穴洗浄</button>  
-            <button type="button" onclick="showMenu('WAX')">WAX脱毛</button> 
+            <button type="button" onclick="showMenu('male')">1回目</button>
+            <button type="button" onclick="showMenu('female')">2回目以降</button>
         </div>
 
         <div id="treatment-text" style="display: none; margin-bottom: 10px;"></div>
 
         <div id="male" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆アートメイク◆</span>
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆1回目◆</span>
             </div>
+                    <div class="info-text">※メニューを選択すると<br>空き状況のカレンダーが表示されます</div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">パウダー眉（2D）22000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">毛並み眉（3D）22000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">パウダー×毛並み眉（4D）33000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">（2D・3D）2カ月以内の<br>リタッチ込みのご予約の方　38000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">（4D）2カ月以内の<br>リタッチ込みのご予約の方　55000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">リタッチ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">眉カラー　1100円</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="4800">リンパドレナージュ(60分)【初回限定】</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="6400">リンパドレナージュ(90分)【初回限定】</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="8000">リンパドレナージュ(120分)【初回限定】</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="4000">リンパクリア(60分)【初回限定】</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="4000">ヘッディマルマ(45分)【初回限定】</button>
             </div>
         </div>
 
         <div id="female" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆ララピール◆</span>
+            <div class="labeltyuuou">
+                <span class="highlight-text">◆2回目以降◆</span>
             </div>
+                    <div class="info-text">※メニューを選択すると<br>空き状況のカレンダーが表示されます</div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">ララピール90分【初回の方限定】<br>11000円→6000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">ララピール60分コース<br>9000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">ララピール60分3回コース<br>27000円→22000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">ララピール60分5回コース＋1回<br>54000円→40000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">ララピール90分コース<br>11000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">ララピール90分コース3回コース<br>33000円→28000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">ララピール90分コース5回コース＋1回<br>64000円→50000円</button>
-            </div>
-
-        <label id="repairLabel"></label>
-        <div id="repairButtons" class="irradiations">
-                        <button type="button" id="oneirradiations" onclick="selectirradiations(this)">1回目</button>
-                        <button type="button" id="twoirradiations" onclick="selectirradiations(this)">2回目</button>
-                        <button type="button" id="threeirradiations" onclick="selectirradiations(this)">3回目</button>
-                    </div>
-
-        <label id="raraLabel"></label>
-        <div id="raraButtons" class="irradiations">
-                        <button type="button" id="fourirradiations" onclick="selectirradiations(this)">1回目</button>
-                        <button type="button" id="fiveirradiations" onclick="selectirradiations(this)">2回目</button>
-                        <button type="button" id="sixirradiations" onclick="selectirradiations(this)">3回目</button>
-                        <button type="button" id="sevenirradiations" onclick="selectirradiations(this)">4回目</button>
-                        <button type="button" id="eightirradiations" onclick="selectirradiations(this)">5回目</button>
-                        <button type="button" id="nineirradiations" onclick="selectirradiations(this)">6回目(+1)</button>
-                    </div>
-                </div>
-
-        <div id="keana" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆毛穴洗浄 ハイドラ◆</span>
-            </div>
-            <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">全顔-毛穴洗浄(ハイドラ)60分 8000円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">頭部-毛穴洗浄(ハイドラ)60分 6000円</button>
-            </div>
-        </div>
-
-        <div id="WAX" class="menu-section">
-            <div class="highlight-background">
-                <span class="highlight-text">◆WAX脱毛◆</span>
-            </div>
-            <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">全顔-WAX脱毛 6500円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment10')" data-price="15000">1パーツ-WAX脱毛 2500円</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment0')" data-price="15000">うなじ-WAX脱毛 3500円</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="6000">リンパドレナージュ(60分)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="8000">リンパドレナージュ(90分)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="10000">リンパドレナージュ(120分)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="5000">リンパクリア(60分)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment10')" data-price="5000">ヘッディマルマ(45分)</button>
             </div>
         </div>
 
@@ -832,17 +967,16 @@
                     </tbody>
                 </table>
             </div>
-
             <div class="loading-spinner" id="loadingSpinner">
                 <div class="spinner"></div>
                 <div class="loading-text">読み込み中...</div>
             </div>
         </div>
 
-        <div class="labelContent">メッセージ<br>（質問等お気軽にご記入ください）</div>
+        <div class="labeltyuuou">メッセージ<br>（質問等お気軽にご記入ください）</div>
         <textarea id="message" rows="4" placeholder="メッセージを入力してください"></textarea>
 
-        <div class="labelContent">ご予約内容</div>
+        <div class="labeltyuuou">ご予約内容</div>
         <div id="displayInfo"></div> <!-- ここに選択された情報を表示します -->
 
         <button class="submit-button" onclick="submitForm()" div id="section-message">予約を行う</button>
@@ -863,7 +997,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             liff.init({
-                liffId: '2007243311-RdeLk7AL'
+                liffId: '2008351570-qVXlBQVr'
             }).then(() => {
                 console.log('LIFF初期化成功');
             }).catch((err) => {
@@ -875,7 +1009,7 @@
 
         // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
         let visitTimes = {
-            '1回目': 30,
+            '1回目': 0,
             '2回目以降': 0
         };
 
@@ -889,29 +1023,16 @@
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
         let menuTimes = {
-            '全顔-毛穴洗浄(ハイドラ)60分 8000円': 90,
-            '頭部-毛穴洗浄(ハイドラ)60分 6000円': 90,
-            '全顔-WAX脱毛 8000円': 90,
-            '1パーツ-WAX脱毛 6000円': 90,
-            'うなじ-WAX脱毛 8000円': 90,
-            '全顔-WAX脱毛 6500円': 90,
-            '1パーツ-WAX脱毛 2500円': 90,
-            'うなじ-WAX脱毛 3500円': 90,
-            'パウダー眉（2D）22000円': 240,
-            'リタッチ': 180,
-            '毛並み眉（3D）22000円': 240,
-            'パウダー×毛並み眉　33000円': 240,
-            '（2D・3D）2カ月以内のリタッチ込みのご予約の方　38000円': 210,
-            '（4D）2カ月以内のリタッチ込みのご予約の方　55000円': 210,
-            '眉カラー　1100円': 30,
-            'ララピール＋導入美顔器': 120,
-            'ララピール90分【初回の方限定】11000円→6000円': 90,
-            'ララピール60分コース9000円': 60,
-            'ララピール60分3回コース27000円→22000円': 60,
-            'ララピール60分5回コース＋1回54000円→40000円': 60,
-            'ララピール90分コース11000円': 90,
-            'ララピール90分コース3回コース33000円→28000円': 90,
-            'ララピール90分コース5回コース＋1回64000円→50000円': 90
+            'リンパドレナージュ(60分)【初回限定】': 120,
+            'リンパドレナージュ(90分)【初回限定】': 150,
+            'リンパドレナージュ(120分)【初回限定】': 180,
+            'リンパクリア(60分)【初回限定】': 120,
+            'ヘッディマルマ(45分)【初回限定】': 105,
+            'リンパドレナージュ(60分)': 120,
+            'リンパドレナージュ(90分)': 150,
+            'リンパドレナージュ(120分)': 180,
+            'リンパクリア(60分)': 120,
+            'ヘッディマルマ(45分)': 105
         };
 
         let selectedMenuTime = 0;
@@ -946,53 +1067,123 @@
             });
         });
 
+        // 選択したメニューを保存
+        function saveMenuSelection(menuType) {
+            localStorage.setItem('selectedMenu', menuType);
+        }
+
+        // メニューを選択したときにローカルストレージに保存
+        function showMenu(menuType) {
+            document.querySelectorAll('.menu-section').forEach(section => section.style.display = 'none');
+            document.getElementById(menuType).style.display = 'block';
+            saveMenuSelection(menuType);
+        }
+
+        function applyPreviousSelection() {
+            const savedMenu = localStorage.getItem('selectedMenu') || '';
+            const savedSymptoms = JSON.parse(localStorage.getItem('selectedSymptoms') || '[]');
+            const savedIrradiations = JSON.parse(localStorage.getItem('selectedIrradiations') || '[]');
+
+            if (!savedMenu && savedSymptoms.length === 0 && savedIrradiations.length === 0) {
+                alert('前回のメニューが見つかりません💦');
+                return;
+            }
+
+            // ✅ ご来店回数（2回目以降）を自動で選択
+            const repeatVisitButton = document.getElementById('repeatVisit');
+            if (repeatVisitButton) {
+                selectVisit(repeatVisitButton);
+            }
+
+            // ✅ 前回の選択状態を初期化
+            // 1. オプションの active クラスを全て外す
+            document.querySelectorAll('.irradiations button.active').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 2. selectedIrradiations をリセット
+            localStorage.setItem('selectedIrradiations', JSON.stringify([]));
+
+            // ✅ メニュー表示
+            if (savedMenu) {
+                showMenu(savedMenu);
+            }
+
+            // ✅ メニュー再選択
+            savedSymptoms.forEach(symptomId => {
+                const symptomButton = document.querySelector(`button[onclick*="selectSymptom"][onclick*="'${symptomId}'"]`);
+                if (symptomButton && !symptomButton.classList.contains('active')) {
+                    symptomButton.click();
+                }
+            });
+
+            // ✅ オプション再選択（初期化済なので安心）
+            savedIrradiations.forEach(irradiationId => {
+                const irradiationButton = document.getElementById(irradiationId);
+                if (irradiationButton && !irradiationButton.classList.contains('active')) {
+                    irradiationButton.click();
+                }
+            });
+
+            // ✅ ここでカレンダーへスクロール
+            const targetElement = document.getElementById('calendar1');
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
 
         function updateDisplayInfo() {
             const name = document.getElementById('name').value;
-            const visitCountText = visitCount ? `<span style="color:#13ca5e;"><strong>【ご来店回数】</strong></span><br>・${visitCount}` : '・来店回数が未選択です';
-            const selectedMenuText = selectedMenu ? `<span style="color:#13ca5e;"><strong>【コース】</strong></span><br>・${selectedMenu}` : '・コースが未選択です';
+
+            const labelStyle = "color:#0c0c0c; font-size:14px; border:1px solid #0c0c0c; padding:0px 3px; border-radius:4px;";
+
+            const visitCountText = visitCount
+                ? `<span style="${labelStyle}"><strong>来店回数</strong></span> ${visitCount}`
+                : '・来店回数が未選択です';
+
+            const selectedMenuText = selectedMenu
+                ? `<span style="${labelStyle}"><strong>来店回数</strong></span> ${selectedMenu}`
+                : '・来店回数が未選択です';
 
             const selectedSymptomText = selectedSymptom.length > 0
-                ? `<span style="color:#13ca5e;"><strong>【メニュー】</strong></span><br>・${selectedSymptom.join('<br>')}`
+                ? `<span style="${labelStyle}"><strong>メニュー</strong></span><br>・${selectedSymptom.join('<br>')}`
                 : '・メニューが未選択です';
 
             const irradiationsText = irradiationsCount
-                ? `<span style="color:#13ca5e;"><strong>【オプション】</strong></span><br>・${irradiationsCount.split(', ').join('<br>・')}`
+                ? `<span style="${labelStyle}"><strong>オプション</strong></span><br>・${irradiationsCount.split(', ').join('<br>・')}`
                 : '・オプション無し';
 
             let totalMinutes = selectedMenuTime + selectedirradiationsTime + selectedVisitTime;
             let hours = Math.floor(totalMinutes / 60);
             let minutes = totalMinutes % 60;
-            let totalTimeText = `<span style="color:#13ca5e;"><strong>【所要時間】</strong></span><br>・${hours > 0 ? hours + '時間' : ''}${minutes}分`;
+            let totalTimeText = `<span style="${labelStyle}"><strong>所要時間</strong></span> ${hours > 0 ? hours + '時間' : ''}${minutes}分`;
 
-            const totalAmountText = `<span style="color:#13ca5e;"><strong>【合計金額】</strong></span><br>・¥${menuPrice + optionsPrice}`;
-            const selectedDateText = selectedFullDate ? `<span style="color:#13ca5e;"><strong>【希望日時】</strong></span><br>・${selectedFullDate}` : '・日時が未選択です';
+            const totalAmountText = `<span style="${labelStyle}"><strong>合計金額</strong></span> ¥${menuPrice + optionsPrice}`;
+
+            const selectedDateText = selectedFullDate
+                ? `<span style="${labelStyle}"><strong>希望日時</strong></span> ${selectedFullDate}`
+                : '・日時が未選択です';
 
             // 修正ボタン付きのHTMLを作成
             document.getElementById('displayInfo').innerHTML = `
         <div class="info-row">
-            <p><span style="color:#13ca5e;"><strong>【お名前】</strong></span><br>・${name}</p>
-            <button class="edit-button" onclick="scrollToElement('name')">修正する</button>
-        </div>
-        <hr>
-        <div class="info-row">
-            <p>${visitCountText}</p>
-            <button class="edit-button" onclick="scrollToElement('firstVisit')">修正する</button>
+            <p><span style="${labelStyle}"><strong>お名前</strong></span> ${name}</p>
+            <button class="edit-button" onclick="scrollToElement('name')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedMenuText}</p>
-            <button class="edit-button" onclick="scrollToElement('course')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('course')">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedSymptomText}</p>
-            <button class="edit-button" onclick="scrollToElement('male'); scrollToElement('female'); scrollToElement('whitening');">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('male'); scrollToElement('female'); scrollToElement('whitening');">修正</button>
         </div>
         <hr>
         <div class="info-row">
             <p>${selectedDateText}</p>
-            <button class="edit-button" onclick="scrollToElement('calendar1')">修正する</button>
+            <button class="edit-button" onclick="scrollToElement('calendar1')">修正</button>
         </div>
         <hr>
     `;
@@ -1055,85 +1246,151 @@
             // ボタンの選択状態を切り替える
             button.classList.toggle('active');
 
+            // ローカルストレージに保存する配列を取得
+            let selectedSymptoms = JSON.parse(localStorage.getItem('selectedSymptoms') || '[]');
 
-    // 選択されたオプションを取得
-    const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
-    const treatmentText = document.getElementById('treatment-text');
-    selectedSymptom = button.textContent;
+            // 選択した症状をローカルストレージに保存（1つだけ保持）
+            selectedSymptoms = [treatmentId];
+            localStorage.setItem('selectedSymptoms', JSON.stringify(selectedSymptoms));
 
-    const repairLabel = document.getElementById('repairLabel');
-    const repairButtons = document.getElementById('repairButtons');
+            // 選択されたオプションを取得
+            const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
+            const treatmentText = document.getElementById('treatment-text');
 
-    if (selectedSymptom === 'ララピール60分3回コース27000円→22000円' || selectedSymptom === 'ララピール90分コース3回コース33000円→28000円') {
-        button.insertAdjacentElement("afterend", repairLabel);
-        repairLabel.insertAdjacentElement("afterend", repairButtons);
-        repairLabel.style.display = 'block';
-        repairButtons.style.display = 'flex';
-    } else {
-        repairLabel.style.display = 'none';
-        repairButtons.style.display = 'none';
-    }
+            if (updatedSelectedButtons.length === 0) {
+                // すべてのボタンの選択が解除された場合、メニュー時間を0にリセット
+                selectedMenuTime = 0;
+                selectedSymptom = null; // 選択されたメニューをリセット
+                menuPrice = 0; // メニュー価格をリセット
+                treatmentText.style.display = 'none';
+                return; // ここで処理を終了
+            } else {
+                // 1つだけ選択状態にする
+                if (updatedSelectedButtons.length > 1) {
+                    updatedSelectedButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active'); // クリックしたボタンだけを選択
+                }
 
-    if (selectedSymptom === 'ララピール60分5回コース＋1回54000円→40000円' || selectedSymptom === 'ララピール90分コース5回コース＋1回64000円→50000円') {
-        button.insertAdjacentElement("afterend", raraLabel);
-        raraLabel.insertAdjacentElement("afterend", raraButtons);
-        raraLabel.style.display = 'block';
-        raraButtons.style.display = 'flex';
-    } else {
-        raraLabel.style.display = 'none';
-        raraButtons.style.display = 'none';
-    }
+                // 選択されたメニューの時間を取得して保存
+                const selectedMenu = button.textContent;
+                selectedMenuTime = menuTimes[selectedMenu] || 0; // メニュー時間を取得して保存
+                selectedSymptom = [selectedMenu]; // 選択されたメニュー名を配列として保存
+                menuPrice = parseInt(button.getAttribute('data-price'), 10) || 0;  // メニューの価格を取得
+            }
 
-    if (updatedSelectedButtons.length === 0) {
-        // すべてのボタンの選択が解除された場合、メニュー時間を0にリセット
-        selectedMenuTime = 0;
-        selectedSymptom = null; // 選択されたメニューをリセット
-        menuPrice = 0; // メニュー価格をリセット
-        treatmentText.style.display = 'none';
-        return; // ここで処理を終了
-    } else {
-        // 1つだけ選択状態にする
-        if (updatedSelectedButtons.length > 1) {
-            updatedSelectedButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active'); // クリックしたボタンだけを選択
-        }
+            console.log('選択されたメニューの時間:', selectedMenuTime);
 
-        // 選択されたメニューの時間を取得して保存
-        const selectedMenu = button.textContent;
-        selectedMenuTime = menuTimes[selectedMenu] || 0; // メニュー時間を取得して保存
-        selectedSymptom = [selectedMenu]; // 選択されたメニュー名を配列として保存
-        menuPrice = parseInt(button.getAttribute('data-price'), 10) || 0;  // メニューの価格を取得
-    }
+            // カレンダーを更新するために取得する日付を渡す
+            fetchAvailability(currentDate);
 
-    console.log('選択されたメニューの時間:', selectedMenuTime);
+            function createTreatmentContent(title, imageUrl, description, price, time) {
+                // 所要時間の表示を条件付きで設定
+                const timeContent = time
+                    ? `<span>所要時間：</span><strong>${time}</strong><br>`
+                    : '';
 
-    // カレンダーを更新するために取得する日付を渡す
-    fetchAvailability(currentDate);
+                return `
+    <div class="treatment-container">
+        <div class="treatment-title">${title}</div>
 
+        <div class="treatment-image">
+            <div class="spinner-overlay">
+                <div class="spinner"></div>
+            </div>
+            <img src="${imageUrl}" alt="${title}" 
+                onload="this.style.display='block'; this.previousElementSibling.style.display='none';">
+        </div>
+
+        <div class="treatment-description">${description}</div>
+
+        <div class="treatment-price">
+            <span>価格：</span><strong>${price}</strong>
+        </div>
+    </div>`;
+            }
+
+
+            // 呼び出し例（treatmentIdやボタンの条件が揃っている前提）
             if (treatmentId === 'treatment1') {
-                treatmentText.innerHTML = `<div style="text-align: left;">同コース利用回数を以下の中から選択してください。</div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/iqzq2rekcnnoz72hax75r/60-90-120-1.jpg?rlkey=m8rm6naz9m5prrcl6tm1b2gq7&st=q3fwxx7t&raw=1',
+                    '背面 or 部分２ヶ所<br><br>疲れた所を重点的に流していきます✨',
+                    '料金：6,000円→4,800円',
+                    '約90分'
+                );
             } else if (treatmentId === 'treatment2') {
-                treatmentText.innerHTML = `<div style="text-align: left;">※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円<br>初診料：＋2,200円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/iqzq2rekcnnoz72hax75r/60-90-120-1.jpg?rlkey=m8rm6naz9m5prrcl6tm1b2gq7&st=q3fwxx7t&raw=1',
+                    '軽めの全身ドレナージュ<br><br>特に疲れがひどい方、より重点的に流したい方におすすめです😌✨',
+                    '料金：8,000円→6,400円',
+                    '約120分'
+                );
             } else if (treatmentId === 'treatment3') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：120分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円<br>初診料：＋2,200円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/iqzq2rekcnnoz72hax75r/60-90-120-1.jpg?rlkey=m8rm6naz9m5prrcl6tm1b2gq7&st=q3fwxx7t&raw=1',
+                    '👑当店1番人気👑<br><br>全身の蓄積された老廃物を一気に流したい方におすすめ✨<br>大満足される方がほとんどです☺️',
+                    '料金：10,000円→8,000円',
+                    '約60分'
+                );
             } else if (treatmentId === 'treatment4') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円<br>初診料：＋2,200円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/u2tf8230wdj0lshxnxktb/.jpg?rlkey=546555uj92r9ipr8j7qijy57w&st=a7qitkq5&raw=1',
+                    '【エステでも整体でもない】老廃物が溜まりやすいリンパの流れを<br>優しく丁寧に整えるオリジナル手技✨',
+                    '料金：5,000円→4,000円',
+                    ''
+                );
             } else if (treatmentId === 'treatment5') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/h7st59bjz3m7jd3lzx315/60.jpg?rlkey=d393stt5df34mdcj64ujiiz6q&st=b76hag34&raw=1',
+                    '脳・心・神経にリラックスを届ける特別なトリートメント<br>自律神経の乱れや、ストレス、<br>睡眠の悩みがある方におすすめです✨',
+                    '料金：5,000円→4,000円',
+                    ''
+                );
             } else if (treatmentId === 'treatment6') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/iqzq2rekcnnoz72hax75r/60-90-120-1.jpg?rlkey=m8rm6naz9m5prrcl6tm1b2gq7&st=q3fwxx7t&raw=1',
+                    '背面 or 部分２ヶ所<br><br>疲れた所を重点的に流していきます✨',
+                    '料金：6,000円',
+                    '約90分'
+                );
             } else if (treatmentId === 'treatment7') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/iqzq2rekcnnoz72hax75r/60-90-120-1.jpg?rlkey=m8rm6naz9m5prrcl6tm1b2gq7&st=q3fwxx7t&raw=1',
+                    '軽めの全身ドレナージュ<br><br>特に疲れがひどい方、より重点的に流したい方におすすめです😌✨',
+                    '料金：8,000円',
+                    '約120分'
+                );
             } else if (treatmentId === 'treatment8') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/iqzq2rekcnnoz72hax75r/60-90-120-1.jpg?rlkey=m8rm6naz9m5prrcl6tm1b2gq7&st=q3fwxx7t&raw=1',
+                    '👑当店1番人気👑<br><br>全身の蓄積された老廃物を一気に流したい方におすすめ✨<br>大満足される方がほとんどです☺️',
+                    '料金：10,000円',
+                    '約60分'
+                );
             } else if (treatmentId === 'treatment9') {
-                treatmentText.innerHTML = `<div style="text-align: left;">頭部とは全体ではなく、生え際から10cm程`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/u2tf8230wdj0lshxnxktb/.jpg?rlkey=546555uj92r9ipr8j7qijy57w&st=a7qitkq5&raw=1',
+                    '【エステでも整体でもない】老廃物が溜まりやすいリンパの流れを<br>優しく丁寧に整えるオリジナル手技✨',
+                    '料金：5,000円',
+                    ''
+                );
             } else if (treatmentId === 'treatment10') {
-                treatmentText.innerHTML = `<div style="text-align: left;">額、鼻、口周り`;
-            } else if (treatmentId === 'treatment11') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
-            } else if (treatmentId === 'treatment12') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
+                treatmentText.innerHTML = createTreatmentContent(
+                    '',
+                    'https://www.dropbox.com/scl/fi/h7st59bjz3m7jd3lzx315/60.jpg?rlkey=d393stt5df34mdcj64ujiiz6q&st=b76hag34&raw=1',
+                    '脳・心・神経にリラックスを届ける特別なトリートメント<br>自律神経の乱れや、ストレス、<br>睡眠の悩みがある方におすすめです✨',
+                    '料金：5,000円',
+                    ''
+                );
             } else {
                 treatmentText.innerHTML = '';
             }
@@ -1154,51 +1411,35 @@
         }
 
         function selectirradiations(button) {
-            /* 訪問回数ボタンの選択状態をリセット */
-            document.getElementById('oneirradiations').classList.remove('active');
-            document.getElementById('twoirradiations').classList.remove('active');
-            document.getElementById('threeirradiations').classList.remove('active');
-            document.getElementById('fourirradiations').classList.remove('active');
-            document.getElementById('fiveirradiations').classList.remove('active');
-            document.getElementById('sixirradiations').classList.remove('active');
-            document.getElementById('sevenirradiations').classList.remove('active');
-            document.getElementById('eightirradiations').classList.remove('active');
-            document.getElementById('nineirradiations').classList.remove('active');
-            /* クリックされたボタンを選択状態にする */
-
-            // 選択された日時をリセット
             selectedFullDate = '';
 
-            // ボタンの選択状態を切り替える
+            // トグル
             button.classList.toggle('active');
 
-            // 選択されたオプションを取得
+            // ✅ 現在アクティブなオプションボタンのみを取得し保存（過去データ無視）
             const selectedButtons = document.querySelectorAll('.irradiations button.active');
-            const selectedIrradiations = Array.from(selectedButtons).map(btn => btn.innerText);
-            irradiationsCount = selectedIrradiations.join(', ');
+            const selectedIrradiations = Array.from(selectedButtons).map(btn => btn.id);
+            localStorage.setItem('selectedIrradiations', JSON.stringify(selectedIrradiations));
 
-            // すべてのオプションの価格を再計算
-            optionsPrice = 0; // 全体をリセットして再計算
-            let totalirradiationsTime = 0; // 選択されたすべてのオプションの合計時間
+            // 表示用データ生成
+            const selectedIrradiationsNames = Array.from(selectedButtons).map(btn => btn.innerText);
+            irradiationsCount = selectedIrradiationsNames.join(', ');
+
+            // 合計金額など更新
+            optionsPrice = 0;
+            let totalirradiationsTime = 0;
             selectedButtons.forEach(btn => {
                 const price = parseInt(btn.getAttribute('data-price'), 10);
                 optionsPrice += price;
 
-                // 各オプションの時間を加算
                 const irradiationName = btn.innerText;
                 const irradiationTime = irradiationsTimes[irradiationName] || 0;
                 totalirradiationsTime += irradiationTime;
             });
 
-            // selectedirradiationsTimeに合計時間を設定
             selectedirradiationsTime = totalirradiationsTime;
 
-            console.log('選択されたオプションの合計時間:', selectedirradiationsTime);
-
-            // カレンダーを更新するために取得する日付を渡す
             fetchAvailability(currentDate);
-
-            // 表示を更新
             updateDisplayInfo();
         }
 
@@ -1225,22 +1466,42 @@
             fetchAvailability(currentDate);
         }
 
+        // メニューの選択を保存する関数
+        function selectMenu(element) {
+            element.classList.toggle('selected');
+
+            let selectedMenus = JSON.parse(localStorage.getItem('selectedMenus') || '[]');
+            const menuId = element.id;
+
+            if (element.classList.contains('selected')) {
+                selectedMenus.push(menuId);
+            } else {
+                selectedMenus = selectedMenus.filter(id => id !== menuId);
+            }
+
+            localStorage.setItem('selectedMenus', JSON.stringify(selectedMenus));
+        }
+
         function showMenu(menu) {
-            // `treatment-text` を非表示にする
+            // treatment-text を非表示にする
             document.getElementById("treatment-text").style.display = "none";
 
             // 選択されたメニューの名前を取得
             let selectedButton = document.querySelector(`.menu-sections button[onclick="showMenu('${menu}')"]`);
+
             if (selectedButton) {
                 selectedMenu = selectedButton.innerText;
             }
+
+            // ✅ ローカルストレージにメニュー識別子を保存（追加）
+            localStorage.setItem('selectedMenu', menu); // ←この行を追加！
 
             // すべてのメニューボタンの選択状態をリセット
             document.querySelectorAll('.menu-sections button').forEach(button => {
                 button.classList.remove('active');
             });
 
-            // 選択されたメニューセクションを表示
+            // 選択されたメニューセクションを非表示＋ボタン状態リセット
             document.querySelectorAll('.menu-section').forEach(section => {
                 section.classList.remove('active');
                 section.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
@@ -1249,12 +1510,13 @@
             // 対応するメニューボタンを選択状態にする
             if (selectedButton) {
                 selectedButton.classList.add('active');
+                selectMenu(selectedButton);
             }
 
             // 選択されたメニューセクションを表示
             document.getElementById(menu).classList.add('active');
 
-            // `treatment-text` の内容をリセット
+            // treatment-text の内容をリセット
             document.getElementById("treatment-text").innerHTML = "";
 
             // メニューとオプションをリセット
@@ -1267,6 +1529,17 @@
             // 表示を更新
             updateDisplayInfo();
         }
+
+        // ページ読み込み時にローカルストレージから選択状態を復元
+        document.addEventListener("DOMContentLoaded", () => {
+            let selectedMenus = JSON.parse(localStorage.getItem('selectedMenus') || '[]');
+            selectedMenus.forEach(menuId => {
+                let menuButton = document.getElementById(menuId);
+                if (menuButton) {
+                    menuButton.classList.add('selected');
+                }
+            });
+        });
 
         function selectDate(cell) {
             // "unavailable" クラスが付いている場合はクリックを無効化
@@ -1297,10 +1570,8 @@
             const formData = {
                 name: document.getElementById('name').value.trim(),
                 phone: document.getElementById('phone').value.trim(),
-                visitCount: visitCount,
                 selectedMenu: selectedMenu,
                 selectedSymptom: selectedSymptom && selectedSymptom.length > 0 ? selectedSymptom : null, // 空の選択肢をチェック
-                irradiationsCount: irradiationsCount,
                 dates: selectedFullDate ? [selectedFullDate] : null, // 空チェック
                 message: document.getElementById('message').value.trim()
             };
@@ -1308,11 +1579,6 @@
             // フォームデータのチェック
             if (!formData.name) {
                 alert('お名前を入力してください。');
-                return;
-            }
-
-            if (!formData.phone) {
-                alert('電話番号を入力してください。');
                 return;
             }
 
@@ -1326,10 +1592,13 @@
                 return;
             }
 
+    // ★ ここで合計料金を計算（メニュー料金＋オプション料金）
+    const totalPrice = menuPrice + optionsPrice;  // menuPrice / optionsPrice は既に上で管理されている変数
+
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.visitCount}\nコース：${formData.selectedMenu}\nメニュー：${formData.selectedSymptom}${formData.irradiationsCount}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
+                text: `【予約フォーム】\n【店舗】：lasante\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.selectedMenu}\nメニュー：${formData.selectedSymptom}\n料金：¥${totalPrice.toLocaleString('ja-JP')}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('当日キャンセルは無いようにお願いいたします。');
@@ -1361,7 +1630,7 @@
                 return;
             }
 
-            const url = 'https://script.google.com/macros/s/AKfycbwjBucKiapeEEn2qAkKjphibHMJBq7pRAaewcFH7kG7efjtq4fGiItd0UASdBr6i7NC/exec' +
+            const url = 'https://script.google.com/macros/s/AKfycbx1E27ZFSxLFESKRSFd478sPQKar8ClNFI5YjUJHUyAV3IsUbKK3tOTOMMNQOMlGVe6Ng/exec' +
                 `?startTime=${startTime.toISOString()}&endTime=${endTime.toISOString()}`;
 
             try {
@@ -1394,7 +1663,7 @@
             const table = calendar.querySelector('table tbody');
 
             const times = [
-                '10:00', '10:30', '11:00', '11:30',
+                '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
                 '12:00', '12:30', '13:00', '13:30',
                 '14:00', '14:30', '15:00', '15:30',
                 '16:00', '16:30', '17:00', '17:30',
@@ -1514,11 +1783,6 @@
                     }
                     // 営業日で、指定されている時間以外の時間は×
                     else if (businessEventTimes.length > 0) {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
-                    }
-                    // 日曜日で、営業日ではない場合
-                    else if (slotStart.getDay() === 0 && !isBusinessDay && businessEventTimes.length === 0) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                     }
