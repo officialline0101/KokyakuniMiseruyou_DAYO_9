@@ -844,10 +844,10 @@
             </div>
             <div class="symptoms">
                 <div class="info-textnomal">⚫︎2cm以上伸びている方は<br>全体染め(2cm以上の根元染め)を<br>ご選択ください</div>
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="2530">根元染め</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="3190">全体染め</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="3850">全体染め ロング</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-price="1980">部分根元染め</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-name="根元染め" data-price="2530">根元染め<br>2cm以内</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-name="全体染め" data-price="3190">全体染め<br>(2cm以上〜肩上までの範囲)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-name="全体染め ロング" data-price="3850">全体染め ロング<br>(肩下以上の範囲)</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment4')" data-name="部分根元染め" data-price="1980">部分根元染め</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
@@ -1247,7 +1247,7 @@ if (savedGender) {
                 }
 
                 // 選択されたメニューの時間を取得して保存
-                const selectedMenu = button.textContent;
+                const selectedMenu = button.getAttribute('data-name') || button.textContent;
                 selectedMenuTime = menuTimes[selectedMenu] || 0; // メニュー時間を取得して保存
                 selectedSymptom = [selectedMenu]; // 選択されたメニュー名を配列として保存
                 menuPrice = parseInt(button.getAttribute('data-price'), 10) || 0;  // メニューの価格を取得
